@@ -1,0 +1,26 @@
+--- a/dist/providers/anthropic.js	2026-03-19 08:07:19.106756970 -0600
++++ b/dist/providers/anthropic.js	2026-03-19 08:07:14.656031985 -0600
+@@ -411,6 +411,7 @@
+             apiKey: null,
+             authToken: apiKey,
+             baseURL: model.baseUrl,
++            maxRetries: 0,
+             dangerouslyAllowBrowser: true,
+             defaultHeaders: mergeHeaders({
+                 accept: "application/json",
+@@ -430,6 +431,7 @@
+             apiKey: null,
+             authToken: apiKey,
+             baseURL: model.baseUrl,
++            maxRetries: 0,
+             dangerouslyAllowBrowser: true,
+             defaultHeaders: mergeHeaders({
+                 accept: "application/json",
+@@ -445,6 +447,7 @@
+     const client = new Anthropic({
+         apiKey,
+         baseURL: model.baseUrl,
++        maxRetries: 0,
+         dangerouslyAllowBrowser: true,
+         defaultHeaders: mergeHeaders({
+             accept: "application/json",
